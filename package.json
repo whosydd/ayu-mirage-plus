@@ -6,7 +6,7 @@
   "publisher": "GY",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Whosydd/vscode-themes"
+    "url": "https://github.com/Whosydd/ayu-mirage-plus"
   },
   "engines": {
     "vscode": "^1.52.0"
