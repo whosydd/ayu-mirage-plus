@@ -170,7 +170,7 @@
     "tab.unfocusedActiveForeground": "#707a8c",
     "tab.unfocusedInactiveForeground": "#707a8c",
     "terminal.ansiBlack": "#191e2a",
-    "terminal.ansiBlue": "#181817",
+    "terminal.ansiBlue": "#66b0e2",
     "terminal.ansiBrightBlack": "#686868",
     "terminal.ansiBrightBlue": "#73d0ff",
     "terminal.ansiBrightCyan": "#95e6cb",
@@ -288,7 +288,11 @@
       }
     },
     {
-      "scope": ["source.java storage.type", "source.haskell storage.type", "source.c storage.type"],
+      "scope": [
+        "source.java storage.type",
+        "source.haskell storage.type",
+        "source.c storage.type"
+      ],
       "settings": {
         "foreground": "#73D0FF"
       }
@@ -588,7 +592,10 @@
       }
     },
     {
-      "scope": ["punctuation.definition.tag.begin.html", "punctuation.definition.tag.end.html"],
+      "scope": [
+        "punctuation.definition.tag.begin.html",
+        "punctuation.definition.tag.end.html"
+      ],
       "settings": {
         "foreground": "#B3B3B379"
       }
