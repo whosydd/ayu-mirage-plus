@@ -11,7 +11,8 @@ Yellow![截屏2020-12-28 17.16.52](https://i.loli.net/2020/12/28/ufstYEknVb8N7iU
 ## Now you can change the theme color you want
 
 ```json
-// add this to your settings.json
+// 1. add this to your settings.json
+// 2. change the color you want
 
 "workbench.colorCustomizations": {
   "[Ayu Mirage Plus]": {
