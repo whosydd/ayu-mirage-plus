@@ -3,6 +3,17 @@
 
 <br>
 
+## 0.2.10 (2021-02-06)
+
+- Add  "blue" and "yellow" and new settings (Now you can change the theme color you want)
+
+```json
+"editor.findMatchBorder": "#fa3344",
+"editor.findMatchHighlightBorder": "#f27983ab",
+```
+
+<br>
+
 ## 0.2.9 (2021-02-04)
 
 - deleted "blue" and "yellow"

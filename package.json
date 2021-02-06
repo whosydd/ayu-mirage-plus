@@ -2,7 +2,7 @@
   "name": "ayu-mirage-plus",
   "displayName": "Ayu Mirage Plus",
   "description": "This theme is basic on Ayu Mirage, just for fun! :)",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "publisher": "GY",
   "repository": {
     "type": "git",
@@ -23,9 +23,19 @@
   "contributes": {
     "themes": [
       {
-        "label": "Ayu Mirage Plus",
+        "label": "Ayu Mirage Plus Green",
         "uiTheme": "vs-dark",
         "path": "./themes/Green.json"
+      },
+      {
+        "label": "Ayu Mirage Plus Blue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Blue.json"
+      },
+      {
+        "label": "Ayu Mirage Plus Yellow",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Yellow.json"
       }
     ]
   }
