@@ -1,11 +1,16 @@
-
 # Changelog
+
+<br>
+
+## 0.3.0 (2021-03-20)
+
+- Unify for similar colors
 
 <br>
 
 ## 0.2.10 (2021-02-06)
 
-- Add  "blue" and "yellow" and new settings (Now you can change the theme color you want)
+- Add "blue" and "yellow" and new settings (Now you can change the theme color you want)
 
 ```json
 "editor.findMatchBorder": "#fa3344",
@@ -163,81 +168,81 @@ reset all yellow to green
 
 #### JS
 
-​		{
+​ {
 
-​          "scope": "variable.other.property.js",
+​ "scope": "variable.other.property.js",
 
-​          "settings": {
+​ "settings": {
 
-​            "foreground": "#f0a1a8",
+​ "foreground": "#f0a1a8",
 
-​            "fontStyle": "italic"
+​ "fontStyle": "italic"
 
-​          }
+​ }
 
-​        },
+​ },
 
-​        {
+​ {
 
-​          "scope": "variable.other.object.property.js",
+​ "scope": "variable.other.object.property.js",
 
-​          "settings": {
+​ "settings": {
 
-​            "foreground": "#77a8d9",
+​ "foreground": "#77a8d9",
 
-​            "fontStyle": "bold"
+​ "fontStyle": "bold"
 
-​          }
+​ }
 
-​        },
+​ },
 
-​        {
+​ {
 
-​          "scope": [
+​ "scope": [
 
-​            "keyword.operator.comparison.js",
+​ "keyword.operator.comparison.js",
 
-​            "keyword.operator.assignment.js",
+​ "keyword.operator.assignment.js",
 
-​            "keyword.operator.arithmetic.js"
+​ "keyword.operator.arithmetic.js"
 
-​          ],
+​ ],
 
-​          "settings": {
+​ "settings": {
 
-​            "foreground": "#e283d2",
+​ "foreground": "#e283d2",
 
-​            "fontStyle": ""
+​ "fontStyle": ""
 
-​          }
+​ }
 
-​        },
+​ },
 
 <br>
 
 #### Python
 
-​		    {
+​ {
 
-​          "scope": [
+​ "scope": [
 
-​            "keyword.operator.assignment.python",
+​ "keyword.operator.assignment.python",
 
-​            "keyword.operator.arithmetic.python",
+​ "keyword.operator.arithmetic.python",
 
-​            "keyword.operator.comparison.python"
+​ "keyword.operator.comparison.python"
 
-​          ],
+​ ],
 
-​          "settings": {
+​ "settings": {
 
-​            "foreground": "#e283d2",
+​ "foreground": "#e283d2",
 
-​            "fontStyle": ""
+​ "fontStyle": ""
 
-​          }
+​ }
 
-​        },
+​ },
 
 <br>
 

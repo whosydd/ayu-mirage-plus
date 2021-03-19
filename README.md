@@ -8,7 +8,7 @@ Yellow![截屏2020-12-28 17.16.52](https://i.loli.net/2020/12/28/ufstYEknVb8N7iU
 
 <br>
 
-## Now you can change the theme color you want
+## Change the theme color you want
 
 ```json
 // 1. add this to your settings.json
@@ -45,8 +45,10 @@ Yellow![截屏2020-12-28 17.16.52](https://i.loli.net/2020/12/28/ufstYEknVb8N7iU
     "tab.activeBorder": "#fad390",
     "tab.hoverForeground": "#fad390",
     "titleBar.activeForeground": "#fad390",
-    "editorLineNumber.activeForeground": "#fad390de"
+    "editorLineNumber.activeForeground": "#fad390de",
+    "editorGroup.border": "#fad39034",
+    "focusBorder": "#fad39034",
+    "list.focusForeground": "#fad390"
   }
 },
 ```
-
