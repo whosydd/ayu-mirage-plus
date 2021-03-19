@@ -147,7 +147,7 @@
     "sideBar.background": "#1f2430",
     "sideBar.border": "#90d7ec34",
     "sideBarSectionHeader.background": "#1f2430",
-    "sideBarSectionHeader.border": "#1f2430",
+    "sideBarSectionHeader.border": "#90d7ec34",
     "sideBarSectionHeader.foreground": "#707a8c",
     "sideBarTitle.foreground": "#707a8c",
     "statusBar.background": "#90d7ec",
@@ -415,22 +415,11 @@
       "scope": [
         "variable",
         "punctuation.section",
-        "keyword.operator.comparison.js",
-        "keyword.operator.assignment.js",
-        "punctuation.accessor.js"
+        "punctuation.separator",
+        "punctuation.terminator"
       ],
       "settings": {
         "foreground": "#CBCCC6"
-      }
-    },
-    {
-      "scope": [
-        "punctuation.separator",
-        "punctuation.terminator",
-        "punctuation.accessor"
-      ],
-      "settings": {
-        "foreground": "#CBCCC6B3"
       }
     },
     {

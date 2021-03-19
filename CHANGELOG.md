@@ -2,6 +2,12 @@
 
 <br>
 
+## 0.3.1 (2021-03-20)
+
+- Fix error color
+
+<br>
+
 ## 0.3.0 (2021-03-20)
 
 - Unify for similar colors
