@@ -236,7 +236,8 @@
         "support.type.primitive",
         "markup.quote",
         "entity.name.type.ts",
-        "storage.modifier.ts"
+        "storage.modifier.ts",
+        "variable.other.object.property"
       ],
       "settings": {
         "fontStyle": "italic"
@@ -247,7 +248,7 @@
       "scope": [
         "entity.name.tag.css",
         "entity.other.attribute-name.class.css",
-        "entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.id",
         "keyword.control.flow.js",
         "keyword.control.flow",
         "markup.heading",
@@ -287,7 +288,6 @@
         "keyword.operator.relational",
         "keyword.operator.increment",
         "keyword.operator.ternary",
-        "variable.other.object.property",
         "support.class.component.js.jsx",
         "support.constant.property-value.css",
         "support.constant.color.w3c-standard-color-name.css"
@@ -351,8 +351,7 @@
         "support.variable.property.js",
         "support.class.component.js.jsx",
         "token.info-token",
-        "markup.changed",
-        "variable.other.object.property"
+        "markup.changed"
       ],
       "settings": {
         "foreground": "#7594F8"
@@ -477,11 +476,7 @@
       }
     },
     {
-      "scope": [
-        "entity.other.attribute-name.id.css",
-        "keyword.control.at-rule.extend.scss",
-        "variable.language.this"
-      ],
+      "scope": ["keyword.control.at-rule.extend.scss", "variable.language.this"],
       "settings": {
         "foreground": "#ED4C67"
       }
@@ -498,9 +493,9 @@
       }
     },
     {
-      "scope": ["markup.deleted"],
+      "scope": ["markup.deleted", "entity.other.attribute-name.id"],
       "settings": {
-        "foreground": "#F27983"
+        "foreground": "#e66379"
       }
     },
     {
@@ -510,19 +505,15 @@
         "support.macro",
         "markup.italic",
         "variable.other.property",
-        "markup.bold"
+        "markup.bold",
+        "variable.other.object.property"
       ],
       "settings": {
         "foreground": "#F28779"
       }
     },
     {
-      "scope": [
-        "variable.parameter",
-        "meta.parameter",
-        "meta.diff",
-        "meta.diff.header"
-      ],
+      "scope": ["variable.parameter", "meta.parameter", "meta.diff", "meta.diff.header"],
       "settings": {
         "foreground": "#D4BFFF"
       }

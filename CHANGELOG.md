@@ -2,6 +2,18 @@
 
 <br>
 
+## 0.3.2 (2021-04-08)
+
+- Change color
+
+```json
+"entity.other.attribute-name.id": "#e66379",
+"variable.other.object.property": "#F28779"
+
+```
+
+<br>
+
 ## 0.3.1 (2021-03-20)
 
 - Fix error color

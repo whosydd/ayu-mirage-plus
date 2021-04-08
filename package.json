@@ -2,7 +2,7 @@
   "name": "ayu-mirage-plus",
   "displayName": "Ayu Mirage Plus",
   "description": "This theme is basic on Ayu Mirage, just for fun! :)",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publisher": "GY",
   "repository": {
     "type": "git",
@@ -38,5 +38,9 @@
         "path": "./themes/Yellow.json"
       }
     ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
   }
 }
