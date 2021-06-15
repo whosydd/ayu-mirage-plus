@@ -2,7 +2,7 @@
   "name": "ayu-mirage-plus",
   "displayName": "Ayu Mirage Plus",
   "description": "This theme is basic on Ayu Mirage, just for fun! :)",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "publisher": "GY",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "vscode": "^1.52.0"
+    "vscode": "^1.46.0"
   },
   "categories": [
     "Themes"
@@ -19,28 +19,87 @@
     "theme",
     "ayu"
   ],
-  "icon": "assets/logo.png",
+  "icon": "src/assets/logo.png",
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:addTheme",
+    "onCommand:resetTheme",
+    "onCommand:delTheme"
+  ],
   "contributes": {
+    "commands": [
+      {
+        "title": "add theme",
+        "command": "addTheme",
+        "category": "ayu-mirage-plus"
+      },
+      {
+        "title": "reset theme",
+        "command": "resetTheme",
+        "category": "ayu-mirage-plus"
+      },
+      {
+        "title": "remove theme",
+        "command": "delTheme",
+        "category": "ayu-mirage-plus"
+      }
+    ],
     "themes": [
       {
-        "label": "Ayu Mirage Plus Green",
+        "label": "Ayu Mirage Plus",
         "uiTheme": "vs-dark",
-        "path": "./themes/Green.json"
-      },
-      {
-        "label": "Ayu Mirage Plus Blue",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Blue.json"
-      },
-      {
-        "label": "Ayu Mirage Plus Yellow",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Yellow.json"
+        "path": "src/themes/theme.json"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Add Theme",
+      "properties": {
+        "ayu-mirage-plus.addTheme": {
+          "type": "array",
+          "default": [
+            {
+              "name": "",
+              "themeColor": "#bbffaa",
+              "foreground": "#000000",
+              "border": "#bbffaa34",
+              "highlight": "#99f881"
+            }
+          ],
+          "description": "Change the theme color you want.",
+          "scope": "resource"
+        },
+        "ayu-mirage-plus.resetTheme": {
+          "type": "array",
+          "default": [
+            {
+              "name": "",
+              "themeColor": "#bbffaa",
+              "foreground": "#000000",
+              "border": "#bbffaa34",
+              "highlight": "#99f881"
+            }
+          ],
+          "description": "Change the theme color you want.",
+          "scope": "resource"
+        }
+      }
+    }
   },
   "scripts": {
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.46.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
   }
 }

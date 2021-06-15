@@ -1,6 +1,9 @@
 # Changelog
 
-<br>
+## 1.0.0 (2021-06-15)
+
+- 重新构建了代码，基本的主题颜色并无大的改动
+- 现在可以根据配置自定义添加主题颜色
 
 ## 0.3.2 (2021-04-08)
 
@@ -12,19 +15,23 @@
 
 ```
 
-<br>
+## 0.3.2 (2021-04-08)
+
+- Change color
+
+```json
+"entity.other.attribute-name.id": "#e66379",
+"variable.other.object.property": "#F28779"
+
+```
 
 ## 0.3.1 (2021-03-20)
 
 - Fix error color
 
-<br>
-
 ## 0.3.0 (2021-03-20)
 
 - Unify for similar colors
-
-<br>
 
 ## 0.2.10 (2021-02-06)
 
@@ -34,8 +41,6 @@
 "editor.findMatchBorder": "#fa3344",
 "editor.findMatchHighlightBorder": "#f27983ab",
 ```
-
-<br>
 
 ## 0.2.9 (2021-02-04)
 
@@ -162,19 +167,11 @@
 ]
 ```
 
-<br>
-
-<br>
-
 ## 0.2.8 (2020-12-28)
-
-<br>
 
 #### Blue.json
 
 Reset all yellow to Blue
-
-<br>
 
 #### Green.json
 
@@ -182,89 +179,81 @@ reset color "#b8e994" --> "\#a6d882"
 
 reset all yellow to green
 
-<br>
-
 #### JS
 
-​ {
+ {
 
-​ "scope": "variable.other.property.js",
+ "scope": "variable.other.property.js",
 
-​ "settings": {
+ "settings": {
 
-​ "foreground": "#f0a1a8",
+ "foreground": "#f0a1a8",
 
-​ "fontStyle": "italic"
+ "fontStyle": "italic"
 
-​ }
+ }
 
-​ },
+ },
 
-​ {
+ {
 
-​ "scope": "variable.other.object.property.js",
+ "scope": "variable.other.object.property.js",
 
-​ "settings": {
+ "settings": {
 
-​ "foreground": "#77a8d9",
+ "foreground": "#77a8d9",
 
-​ "fontStyle": "bold"
+ "fontStyle": "bold"
 
-​ }
+ }
 
-​ },
+ },
 
-​ {
+ {
 
-​ "scope": [
+ "scope": [
 
-​ "keyword.operator.comparison.js",
+ "keyword.operator.comparison.js",
 
-​ "keyword.operator.assignment.js",
+ "keyword.operator.assignment.js",
 
-​ "keyword.operator.arithmetic.js"
+ "keyword.operator.arithmetic.js"
 
-​ ],
+ ],
 
-​ "settings": {
+ "settings": {
 
-​ "foreground": "#e283d2",
+ "foreground": "#e283d2",
 
-​ "fontStyle": ""
+ "fontStyle": ""
 
-​ }
+ }
 
-​ },
-
-<br>
+ },
 
 #### Python
 
-​ {
+ {
 
-​ "scope": [
+ "scope": [
 
-​ "keyword.operator.assignment.python",
+ "keyword.operator.assignment.python",
 
-​ "keyword.operator.arithmetic.python",
+ "keyword.operator.arithmetic.python",
 
-​ "keyword.operator.comparison.python"
+ "keyword.operator.comparison.python"
 
-​ ],
+ ],
 
-​ "settings": {
+ "settings": {
 
-​ "foreground": "#e283d2",
+ "foreground": "#e283d2",
 
-​ "fontStyle": ""
+ "fontStyle": ""
 
-​ }
+ }
 
-​ },
-
-<br>
-
-<br>
+ },
 
 ## 0.2.7 (2020-12-26)
 
