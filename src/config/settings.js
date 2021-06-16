@@ -53,7 +53,5 @@ module.exports = {
     'textLink.activeForeground',
     'extensionButton.prominentHoverBackground',
     'button.hoverBackground',
-    'statusBarItem.hoverBackground',
-    'textLink.activeForeground',
   ],
 }

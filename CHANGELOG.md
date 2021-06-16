@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 (2021-06-16)
+
+- 为了更好的适配，更改了`statusBarItem.hoverBackground`的颜色，同时不会受高亮颜色影响
+- 稍微更改了高亮颜色的默认值
+
 ## 1.0.0 (2021-06-15)
 
 - 重新构建了代码，基本的主题颜色并无大的改动
@@ -181,79 +186,79 @@ reset all yellow to green
 
 #### JS
 
- {
+{
 
- "scope": "variable.other.property.js",
+"scope": "variable.other.property.js",
 
- "settings": {
+"settings": {
 
- "foreground": "#f0a1a8",
+"foreground": "#f0a1a8",
 
- "fontStyle": "italic"
+"fontStyle": "italic"
 
- }
+}
 
- },
+},
 
- {
+{
 
- "scope": "variable.other.object.property.js",
+"scope": "variable.other.object.property.js",
 
- "settings": {
+"settings": {
 
- "foreground": "#77a8d9",
+"foreground": "#77a8d9",
 
- "fontStyle": "bold"
+"fontStyle": "bold"
 
- }
+}
 
- },
+},
 
- {
+{
 
- "scope": [
+"scope": [
 
- "keyword.operator.comparison.js",
+"keyword.operator.comparison.js",
 
- "keyword.operator.assignment.js",
+"keyword.operator.assignment.js",
 
- "keyword.operator.arithmetic.js"
+"keyword.operator.arithmetic.js"
 
- ],
+],
 
- "settings": {
+"settings": {
 
- "foreground": "#e283d2",
+"foreground": "#e283d2",
 
- "fontStyle": ""
+"fontStyle": ""
 
- }
+}
 
- },
+},
 
 #### Python
 
- {
+{
 
- "scope": [
+"scope": [
 
- "keyword.operator.assignment.python",
+"keyword.operator.assignment.python",
 
- "keyword.operator.arithmetic.python",
+"keyword.operator.arithmetic.python",
 
- "keyword.operator.comparison.python"
+"keyword.operator.comparison.python"
 
- ],
+],
 
- "settings": {
+"settings": {
 
- "foreground": "#e283d2",
+"foreground": "#e283d2",
 
- "fontStyle": ""
+"fontStyle": ""
 
- }
+}
 
- },
+},
 
 ## 0.2.7 (2020-12-26)
 

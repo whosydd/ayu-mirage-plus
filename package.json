@@ -2,7 +2,7 @@
   "name": "ayu-mirage-plus",
   "displayName": "Ayu Mirage Plus",
   "description": "This theme is basic on Ayu Mirage, just for fun! :)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "GY",
   "repository": {
     "type": "git",
@@ -63,7 +63,7 @@
               "themeColor": "#bbffaa",
               "foreground": "#000000",
               "border": "#bbffaa34",
-              "highlight": "#99f881"
+              "highlight": "#8cf173"
             }
           ],
           "description": "Change the theme color you want.",
@@ -77,7 +77,7 @@
               "themeColor": "#bbffaa",
               "foreground": "#000000",
               "border": "#bbffaa34",
-              "highlight": "#99f881"
+              "highlight": "#8cf173"
             }
           ],
           "description": "Change the theme color you want.",
