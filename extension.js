@@ -27,7 +27,7 @@ function activate(context) {
             () =>
               fs.readFile(`${__dirname}/src/themes/theme-${name}.json`, 'utf-8', (err, data) => {
                 if (err) throw err
-                const theme = eval('(' + data + ')')
+                const theme = JSON.parse(data)
                 themeColors.forEach(item => (theme.colors[item] = themeColor))
                 foregroundColors.forEach(item => (theme.colors[item] = foreground))
                 borderColors.forEach(item => (theme.colors[item] = border))
@@ -62,7 +62,7 @@ function activate(context) {
       // 注入package.json
       fs.readFile(`${__dirname}/package.json`, 'utf-8', (err, data) => {
         if (err) throw err
-        const packageFile = eval('(' + data + ')')
+        const packageFile = JSON.parse(data)
         themes.forEach(item => {
           if (!packageFile.contributes.themes.find(i => i.label === item.label)) {
             packageFile.contributes.themes.push(item)
@@ -91,7 +91,7 @@ function activate(context) {
         if (fs.existsSync(`${__dirname}/src/themes/theme-${name}.json`)) {
           fs.readFile(`${__dirname}/src/themes/theme-${name}.json`, 'utf-8', (err, data) => {
             if (err) throw err
-            const theme = eval('(' + data + ')')
+            const theme = JSON.parse(data)
             themeColors.forEach(item => (theme.colors[item] = themeColor))
             foregroundColors.forEach(item => (theme.colors[item] = foreground))
             borderColors.forEach(item => (theme.colors[item] = border))
@@ -130,7 +130,7 @@ function activate(context) {
     // 移除package.json中的theme
     fs.readFile(`${__dirname}/package.json`, 'utf-8', async (err, data) => {
       if (err) throw err
-      const packageFile = eval('(' + data + ')')
+      const packageFile = JSON.parse(data)
       let themes = packageFile.contributes.themes
       const rmList = await vscode.window.showQuickPick(themes, { canPickMany: true })
       const rmThemeList = rmList.filter(item => themes.includes(item))
