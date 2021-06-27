@@ -1,0 +1,9 @@
+**/*.min.js
+**/*.min.css
+
+.vscode/
+.idea/
+node_modules/
+test/
+dist/
+build/
