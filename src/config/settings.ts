@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   foregroundColors: [
     'statusBar.foreground',
     'badge.foreground',
