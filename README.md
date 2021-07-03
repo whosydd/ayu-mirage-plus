@@ -4,11 +4,11 @@
 
 ## Default
 
-![](https://i.loli.net/2021/04/08/EDVtudeZiHPKk8G.png)
+![](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000712.PNG)
 
 ## Custom
 
-### Add 
+### Add
 
 1. 在`settings.json`中配置`ayu-mirage-plus.addTheme`，可以配置多个
 
@@ -33,7 +33,7 @@
 
 2. 使用`ayu-mirage-plus:add theme`添加主题
 
-![add](https://i.loli.net/2021/06/15/U7kNFnMrqfhLQm2.png)
+![add](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000705.PNG)
 
 ### Modify
 
@@ -60,13 +60,15 @@
 
 2. 使用`ayu-mirage-plus:reset theme`修改主题
 
-![add](https://i.loli.net/2021/06/15/U7kNFnMrqfhLQm2.png)
+![add](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000705.PNG)
 
 ### Remove
 
 使用`ayu-mirage-plus:remove theme`删除主题
 
-![remove](https://i.loli.net/2021/06/15/U3ASCuaWQITOyVq.gif)
+![remove](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000717.gif)
+
+
 
 ## Issues
 
@@ -74,11 +76,8 @@
 
 When you push the button to reloading the window after add or remove theme, you need waiting for the following prompt, after reloading the window, you can use the configured theme. To put it bluntly, it means to reload the window several times. I haven't found a solution yet. . .
 
-![reload-window-zh-cn](https://i.loli.net/2021/06/15/Ez29Xi1gIU4TF3D.png)![reload window](https://i.loli.net/2021/06/15/hs7xWZctVmKPiav.png)
+![](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000716.PNG)
 
-> 如果遇到其他问题，欢迎提交issue
+> 如果遇到其他问题，欢迎提交 issue
 >
 > If you find other problems, please submit an issue
-
-
-
