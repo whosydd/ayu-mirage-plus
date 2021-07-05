@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.3 (2021-07-06)
+
+- 拆分代码
+- 针对 `.vue` 文件修改部分高亮
+  - "meta.tag.block.any.html"
+  - "punctuation.separator.key-value.html"
+  - "support.class.component.html"
+
 ## 1.1.2 (2021-07-04)
 
 - fix bug
