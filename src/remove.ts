@@ -1,4 +1,3 @@
-// 移除package.json中的theme
 import * as fs from 'fs'
 import * as path from 'path'
 import * as vscode from 'vscode'
@@ -8,6 +7,7 @@ export default async () => {
     if (err) {
       throw err
     }
+
     const packageFile = JSON.parse(data)
     let themes: { label: string; uiTheme: string; path: string }[] = packageFile.contributes.themes
     const rmList = await vscode.window.showQuickPick(themes, {
@@ -35,6 +35,10 @@ export default async () => {
         `${rmThemeList?.map(item => item.label).toString()} has been removed!`,
         'Reload Window'
       )
-      .then(() => vscode.commands.executeCommand('workbench.action.reloadWindow'))
+      .then(value =>
+        value === 'Reload Window'
+          ? vscode.commands.executeCommand('workbench.action.reloadWindow')
+          : null
+      )
   })
 }
