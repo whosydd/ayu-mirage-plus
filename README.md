@@ -2,8 +2,6 @@
 
 **This theme is basic on Ayu Mirage, just for fun! :)**
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/whosydd/ayu-mirage-plus)
-
 ## Default
 
 ![](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000712.PNG)
