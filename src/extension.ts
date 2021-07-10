@@ -1,12 +1,7 @@
-import * as fs from 'fs'
-import * as path from 'path'
 import * as vscode from 'vscode'
 import add from './add'
-import settings from './config/settings'
 import remove from './remove'
 import reset from './reset'
-
-const { foregroundColors, themeColors, borderColors, highlightColors } = settings
 
 export function activate(context: vscode.ExtensionContext) {
   // 生成主题

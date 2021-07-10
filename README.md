@@ -18,17 +18,21 @@
 "ayu-mirage-plus.addTheme": [
     {
       "name": "red",
-      "themeColor": "#f00",
-      "foreground": "#000000",
-      "border": "#f00",
-      "highlight": "#f00"
+      "colors":{
+        "themeColor": "#f00",
+        "foreground": "#000000",
+        "border": "#f00",
+        "highlight": "#f00"
+      }
     },
     {
       "name": "yellow",
-      "themeColor": "#ff0",
-      "foreground": "#000000",
-      "border": "#ff0",
-      "highlight": "#ff0"
+      "colors":{
+        "themeColor": "#ff0",
+        "foreground": "#000000",
+        "border": "#ff0",
+        "highlight": "#ff0"
+      }
     }
   ]
 ```
@@ -45,18 +49,22 @@
 "ayu-mirage-plus.resetTheme": [
     {
       "name": "red",
-      "themeColor": "#bbffaa",
-      "foreground": "#000000",
-      "border": "#bbffaa34",
-      "highlight": "#99f881"
+      "colors":{
+        "themeColor": "#f00",
+        "foreground": "#000000",
+        "border": "#f00",
+        "highlight": "#f00"
+      }
     },
     {
       "name": "yellow",
-      "themeColor": "#f00",
-      "foreground": "#000000",
-      "border": "#f00",
-      "highlight": "#f00"
-    },
+      "colors":{
+        "themeColor": "#ff0",
+        "foreground": "#000000",
+        "border": "#ff0",
+        "highlight": "#ff0"
+      }
+    }
   ]
 ```
 
@@ -69,8 +77,6 @@
 使用`ayu-mirage-plus:remove theme`删除主题
 
 ![remove](https://raw.githubusercontent.com/whosydd/images-in-one/main/20210704000717.gif)
-
-
 
 ## Issues
 

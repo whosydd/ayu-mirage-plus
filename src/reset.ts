@@ -1,5 +1,4 @@
 import * as fs from 'fs'
-import * as path from 'path'
 import * as vscode from 'vscode'
 import settings from './config/settings'
 
@@ -11,17 +10,35 @@ export default async () => {
     | [
         {
           name: string
-          themeColor: string
-          foreground: string
-          border: string
-          highlight: string
+          colors: {
+            themeColor: string
+            foreground: string
+            border: string
+            highlight: string
+          }
         }
       ]
     | undefined = await vscode.workspace.getConfiguration('ayu-mirage-plus').get('resetTheme')
+
   // 判断是否有配置项
-  if (res !== undefined && res[0].name !== '') {
+  if (res && res.length > 0 && res[0].name !== '') {
+    // 判断配置项格式
+    if (!res[0].colors) {
+      vscode.window.showInformationMessage('Ayu Mirage Plus 1.2.0 new!', {
+        modal: true,
+        // @ts-ignore
+        detail: `现在配置项需要 name 和 colors 属性，请重新配置选项！
+        Now you need use "name" and "colors" in the configuration items.
+        
+        For details, please refer to the extension page.`,
+      })
+      return
+    }
     res.map(item => {
-      const { name, themeColor, foreground, border, highlight } = item
+      const {
+        name,
+        colors: { themeColor, foreground, border, highlight },
+      } = item
       if (fs.existsSync(`${__dirname}/themes/theme-${name}.json`)) {
         fs.readFile(`${__dirname}/themes/theme-${name}.json`, 'utf-8', (err, data) => {
           if (err) {
@@ -38,9 +55,11 @@ export default async () => {
               `The "Ayu Mirage Plus ${name}" already modified!`,
               'Reload Window'
             )
-            .then(() => {
-              vscode.commands.executeCommand('workbench.action.reloadWindow')
-            })
+            .then(value =>
+              value === 'Reload Window'
+                ? vscode.commands.executeCommand('workbench.action.reloadWindow')
+                : null
+            )
         })
       } else {
         vscode.window
@@ -48,7 +67,11 @@ export default async () => {
             `The "Ayu Mirage Plus ${name}" has not been created yet!`,
             'Open settings.json'
           )
-          .then(() => vscode.commands.executeCommand('workbench.action.openSettingsJson'))
+          .then(value =>
+            value === 'Open settings.json'
+              ? vscode.commands.executeCommand('workbench.action.openSettingsJson')
+              : null
+          )
       }
     })
   } else {
@@ -57,6 +80,10 @@ export default async () => {
         'Please set "ayu-mirage-plus.resetTheme" in settings.json first!',
         'Open settings.json'
       )
-      .then(() => vscode.commands.executeCommand('workbench.action.openSettingsJson'))
+      .then(value =>
+        value === 'Open settings.json'
+          ? vscode.commands.executeCommand('workbench.action.openSettingsJson')
+          : null
+      )
   }
 }
