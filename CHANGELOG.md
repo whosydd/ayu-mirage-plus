@@ -1,12 +1,18 @@
 # Changelog
 
+## 1.2.1 (2021-07-16)
+
+- 修改 golang 部分高亮
+  - "keyword.var.go"
+  - "keyword.control.go"
+
 ## 1.2.0 (2021-07-10)
 
 - 调整配置项结构，现在需要 `name` 和 `colors` 属性
 - 修复配置项中无法启动内置 color picker 的问题
 - 针对`typescript`添加部分高亮
   - "support.variable.property.ts"
-  - "support.variable.property.tsx",
+  - "support.variable.property.tsx"
 
 ## 1.1.3 (2021-07-06)
 

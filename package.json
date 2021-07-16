@@ -2,7 +2,7 @@
   "name": "ayu-mirage-plus",
   "displayName": "Ayu Mirage Plus",
   "description": "This theme is basic on Ayu Mirage, just for fun! :)",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "GY",
   "repository": {
     "type": "git",
@@ -17,7 +17,9 @@
   ],
   "keywords": [
     "theme",
-    "ayu"
+    "ayu",
+    "ayu-mirage",
+    "ayu-theme"
   ],
   "icon": "icon.png",
   "main": "./dist/extension.js",
