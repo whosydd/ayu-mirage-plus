@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.2.2 (2021-09-02)
+
+- 修改字符串相关部分高亮
+  - "punctuation.definition.template-expression.begin"
+  - "punctuation.definition.template-expression.end"
+  - "punctuation.definition.string.template.begin"
+  - "punctuation.definition.string.template.end"
+  - "punctuation.definition.string.begin"
+  - "punctuation.definition.string.end"
+
+- 修改关键字部分高亮
+  - "keyword.control.flow"
+  - "storage.modifier.async"
+
 ## 1.2.1 (2021-07-16)
 
 - 修改 golang 部分高亮

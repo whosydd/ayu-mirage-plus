@@ -231,8 +231,6 @@
         "keyword.control.conditional",
         "keyword.control.loop",
         "variable.other.property",
-        "punctuation.definition.string.begin",
-        "punctuation.definition.string.end",
         "meta.brace.square",
         "meta.object-literal.key",
         "variable.language.this",
@@ -240,7 +238,15 @@
         "markup.quote",
         "entity.name.type.ts",
         "storage.modifier.ts",
-        "variable.other.object.property"
+        "variable.other.object.property",
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end",
+        "punctuation.definition.string.template.begin",
+        "punctuation.definition.string.template.end",
+        "punctuation.definition.string.begin",
+        "punctuation.definition.string.end",
+        "keyword.control.flow",
+        "storage.modifier.async"
       ],
       "settings": {
         "fontStyle": "italic"
@@ -251,8 +257,6 @@
         "entity.name.tag.css",
         "entity.other.attribute-name.class.css",
         "entity.other.attribute-name.id.css",
-        "keyword.control.flow.js",
-        "keyword.control.flow",
         "markup.heading",
         "markup.heading entity.name",
         "meta.separator",
@@ -266,13 +270,11 @@
       "scope": [
         "markup.italic markup.bold",
         "markup.bold markup.italic",
-        "keyword.control.flow.js",
         "keyword.control.import.python",
         "keyword.control.at-rule.extend.scss",
         "keyword.control.at-rule.include.scss",
         "keyword.control.at-rule.mixin.scss",
-        "keyword.control.at-rule.function.scss",
-        "keyword.control.flow"
+        "keyword.control.at-rule.function.scss"
       ],
       "settings": {
         "fontStyle": "bold italic"
@@ -325,12 +327,16 @@
     },
     {
       "scope": [
+        "meta.brace.square",
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end",
+        "punctuation.definition.string.template.begin",
+        "punctuation.definition.string.template.end",
         "punctuation.definition.string.begin",
-        "punctuation.definition.string.end",
-        "meta.brace.square"
+        "punctuation.definition.string.end"
       ],
       "settings": {
-        "foreground": "#4BD484"
+        "foreground": "#4bda92"
       }
     },
     {
@@ -541,7 +547,6 @@
         "keyword.control.conditional",
         "storage.type",
         "keyword.control.loop",
-        "keyword.control.flow",
         "meta.object-literal.key",
         "token.debug-token",
         "meta.tag.block.any.html",
