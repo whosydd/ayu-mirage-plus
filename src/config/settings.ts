@@ -4,7 +4,6 @@ export default {
     'badge.foreground',
     'activityBarBadge.foreground',
     'button.foreground',
-    'debugConsole.warningForeground',
     'extensionButton.prominentForeground',
   ],
   themeColors: [

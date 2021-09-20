@@ -1,8 +1,16 @@
 # Changelog
 
+## 1.2.3 (2021-09-21)
+
+- 修改 "debugConsole.warningForeground": "#dfbb74"
+- 修改部分关键字字体为"italic"
+  - keyword.operator.new
+  - keyword.operator.expression
+
 ## 1.2.2 (2021-09-02)
 
 - 修改字符串相关部分高亮
+
   - "punctuation.definition.template-expression.begin"
   - "punctuation.definition.template-expression.end"
   - "punctuation.definition.string.template.begin"
