@@ -201,7 +201,7 @@
     "tree.indentGuidesStroke": "#707a8cb3",
     "walkThrough.embeddedEditorBackground": "#232834",
     "widget.shadow": "#141925",
-    "debugConsole.warningForeground": "#000000"
+    "debugConsole.warningForeground": "#dfbb74"
   },
   "tokenColors": [
     {
@@ -246,7 +246,9 @@
         "punctuation.definition.string.begin",
         "punctuation.definition.string.end",
         "keyword.control.flow",
-        "storage.modifier.async"
+        "storage.modifier.async",
+        "keyword.operator.new",
+        "keyword.operator.expression"
       ],
       "settings": {
         "fontStyle": "italic"
@@ -440,11 +442,7 @@
       }
     },
     {
-      "scope": [
-        "storage",
-        "keyword",
-        "constant.numeric.line-number.match"
-      ],
+      "scope": ["storage", "keyword", "constant.numeric.line-number.match"],
       "settings": {
         "foreground": "#FFA759"
       }
@@ -476,20 +474,13 @@
       }
     },
     {
-      "scope": [
-        "invalid",
-        "message.error",
-        "token.error-token"
-      ],
+      "scope": ["invalid", "message.error", "token.error-token"],
       "settings": {
         "foreground": "#FF3333"
       }
     },
     {
-      "scope": [
-        "keyword.control.at-rule.extend.scss",
-        "variable.language.this"
-      ],
+      "scope": ["keyword.control.at-rule.extend.scss", "variable.language.this"],
       "settings": {
         "foreground": "#ED4C67"
       }
@@ -507,10 +498,7 @@
       }
     },
     {
-      "scope": [
-        "markup.deleted",
-        "entity.other.attribute-name.id.css"
-      ],
+      "scope": ["markup.deleted", "entity.other.attribute-name.id.css"],
       "settings": {
         "foreground": "#E66379"
       }
@@ -530,12 +518,7 @@
       }
     },
     {
-      "scope": [
-        "variable.parameter",
-        "meta.parameter",
-        "meta.diff",
-        "meta.diff.header"
-      ],
+      "scope": ["variable.parameter", "meta.parameter", "meta.diff", "meta.diff.header"],
       "settings": {
         "foreground": "#D4BFFF"
       }
@@ -559,18 +542,13 @@
       }
     },
     {
-      "scope": [
-        "keyword.operator"
-      ],
+      "scope": ["keyword.operator"],
       "settings": {
         "foreground": "#E283D2"
       }
     },
     {
-      "scope": [
-        "keyword.operator.logical",
-        "keyword.operator.bitwise"
-      ],
+      "scope": ["keyword.operator.logical", "keyword.operator.bitwise"],
       "settings": {
         "foreground": "#F29E74"
       }
