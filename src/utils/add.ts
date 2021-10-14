@@ -1,41 +1,39 @@
 import * as fs from 'fs'
 import * as vscode from 'vscode'
 import settings from '../config/settings'
+import { tipConfigFormat, tipSetConfig, tipAlready } from '../config/tips'
+import { ConfigParams, Theme } from '../config/types'
 
 const { foregroundColors, themeColors, borderColors, highlightColors } = settings
 
+// 配置项格式
+
 export default async () => {
   // 获取设置选项
-  const res:
-    | [
-        {
-          name: string
-          colors: {
-            themeColor: string
-            foreground: string
-            border: string
-            highlight: string
-          }
-        }
-      ]
-    | undefined = await vscode.workspace.getConfiguration('ayu-mirage-plus').get('addTheme')
+  const config: ConfigParams[] | undefined = await vscode.workspace
+    .getConfiguration('ayu-mirage-plus')
+    .get('addTheme')
 
-  // 判断配置项
-  if (res && res.length > 0 && res[0].name !== '') {
-    // 判断配置项格式
-    if (!res[0].colors) {
-      vscode.window.showInformationMessage('Ayu Mirage Plus 1.2.0 new!', {
-        modal: true,
-        // @ts-ignore
-        detail: `现在配置项需要 name 和 colors 属性，请重新配置选项！
-        Now you need use "name" and "colors" in the configuration items.
-        
-        For details, please refer to the extension page.`,
-      })
+  try {
+    // 配置项不存在抛出错误
+    if (config === undefined) {
+      throw new Error('配置项不存在！')
+    }
+
+    // 检测是否存在配置项
+    if (config[0].name === '') {
+      tipSetConfig('add')
       return
     }
 
-    const themes = res.reduce<{ label: string; uiTheme: string; path: string }[]>((pre, item) => {
+    // 配置项格式不正确弹出提示（历史遗留问题）
+    if (!config[0].colors) {
+      tipConfigFormat()
+      return
+    }
+
+    // 处理配置项
+    const themes = config.reduce<Theme[]>((pre, item) => {
       const {
         name,
         colors: { themeColor, foreground, border, highlight },
@@ -50,6 +48,7 @@ export default async () => {
               if (err) {
                 throw err
               }
+
               const theme = JSON.parse(data)
               themeColors.forEach(item => (theme.colors[item] = themeColor))
               foregroundColors.forEach(item => (theme.colors[item] = foreground))
@@ -57,21 +56,14 @@ export default async () => {
               highlightColors.forEach(item => (theme.colors[item] = highlight))
               theme.name = `Ayu Mirage Plus ${name}`
               fs.writeFileSync(`${__dirname}/themes/theme-${name}.json`, JSON.stringify(theme))
-              vscode.window
-                .showInformationMessage(
-                  `The "Ayu Mirage Plus ${name}" has been created!`,
-                  'Reload Window'
-                )
-                .then(value =>
-                  value === 'Reload Window'
-                    ? vscode.commands.executeCommand('workbench.action.reloadWindow')
-                    : null
-                )
+
+              tipAlready(name, 'has been created!')
             })
         )
       } else {
         vscode.window.showWarningMessage(`The "Ayu Mirage Plus ${name}" already exists！`)
       }
+
       return [
         ...pre,
         {
@@ -87,6 +79,7 @@ export default async () => {
       if (err) {
         throw err
       }
+
       const packageFile = JSON.parse(data)
       themes.forEach(item => {
         if (
@@ -97,16 +90,7 @@ export default async () => {
       })
       fs.writeFileSync(`${__dirname}/../package.json`, JSON.stringify(packageFile))
     })
-  } else {
-    vscode.window
-      .showWarningMessage(
-        'Please set "ayu-mirage-plus.addTheme" in settings.json first!',
-        'Open settings.json'
-      )
-      .then(value =>
-        value === 'Open settings.json'
-          ? vscode.commands.executeCommand('workbench.action.openSettingsJson')
-          : null
-      )
+  } catch (error: any) {
+    vscode.window.showErrorMessage(error.message)
   }
 }

@@ -1,6 +1,8 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as vscode from 'vscode'
+import { tipNothing, tipRemove } from '../config/tips'
+import { Theme } from '../config/types'
 
 export default async () => {
   fs.readFile(`${__dirname}/../package.json`, 'utf-8', async (err, data) => {
@@ -8,40 +10,41 @@ export default async () => {
       throw err
     }
 
+    // 获取package.json中的主题配置
     const packageFile = JSON.parse(data)
-    let themes: { label: string; uiTheme: string; path: string }[] = packageFile.contributes.themes
-    const rmList = await vscode.window.showQuickPick(themes, {
+    let themes: Theme[] = packageFile.contributes.themes
+
+    // 去除默认主题
+    const rmThemeList = themes.filter(item => item.label !== 'Ayu Mirage Plus')
+
+    if (rmThemeList.length === 0) {
+      tipNothing()
+      return
+    }
+
+    // 选择需要删除的主题列表
+    const rmList = await vscode.window.showQuickPick(rmThemeList, {
       canPickMany: true,
     })
-    const rmThemeList = rmList?.filter(item => themes.includes(item))
 
-    // 删除主题文件
-    rmThemeList?.forEach(item => {
-      const fileName = [
-        ...__dirname.split(path.sep),
-        ...item.path.split('dist/')[1].split(path.sep),
-      ].join('/')
-      if (fs.existsSync(fileName)) {
-        fs.rmSync(fileName)
-      }
-    })
+    if (rmList !== undefined) {
+      // 删除主题文件
+      rmList.forEach(item => {
+        const fileName = [
+          ...__dirname.split(path.sep),
+          ...item.path.split('dist/')[1].split(path.sep),
+        ].join('/')
+        if (fs.existsSync(fileName)) {
+          fs.rmSync(fileName)
+        }
+      })
 
-    // 移除package.json中的主题
-    const res = themes.filter(item => !rmThemeList?.includes(item))
-    packageFile.contributes.themes = res
-    fs.writeFileSync(`${__dirname}/../package.json`, JSON.stringify(packageFile))
+      // 移除package.json中的主题
+      const res = themes.filter(item => !rmList?.includes(item))
+      packageFile.contributes.themes = res
+      fs.writeFileSync(`${__dirname}/../package.json`, JSON.stringify(packageFile))
 
-    if (rmThemeList !== undefined) {
-      vscode.window
-        .showInformationMessage(
-          `${rmThemeList?.map(item => item.label).toString()} has been removed!`,
-          'Reload Window'
-        )
-        .then(value =>
-          value === 'Reload Window'
-            ? vscode.commands.executeCommand('workbench.action.reloadWindow')
-            : null
-        )
+      tipRemove(rmList)
     }
   })
 }
