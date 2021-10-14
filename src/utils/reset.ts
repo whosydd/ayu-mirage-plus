@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as vscode from 'vscode'
-import settings from './config/settings'
+import settings from '../config/settings'
 
 const { foregroundColors, themeColors, borderColors, highlightColors } = settings
 

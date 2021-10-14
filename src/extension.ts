@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
-import add from './add'
-import remove from './remove'
-import reset from './reset'
+import add from './utils/add'
+import remove from './utils/remove'
+import reset from './utils/reset'
 
 export function activate(context: vscode.ExtensionContext) {
   // 生成主题

@@ -30,15 +30,18 @@ export default async () => {
     const res = themes.filter(item => !rmThemeList?.includes(item))
     packageFile.contributes.themes = res
     fs.writeFileSync(`${__dirname}/../package.json`, JSON.stringify(packageFile))
-    vscode.window
-      .showInformationMessage(
-        `${rmThemeList?.map(item => item.label).toString()} has been removed!`,
-        'Reload Window'
-      )
-      .then(value =>
-        value === 'Reload Window'
-          ? vscode.commands.executeCommand('workbench.action.reloadWindow')
-          : null
-      )
+
+    if (rmThemeList !== undefined) {
+      vscode.window
+        .showInformationMessage(
+          `${rmThemeList?.map(item => item.label).toString()} has been removed!`,
+          'Reload Window'
+        )
+        .then(value =>
+          value === 'Reload Window'
+            ? vscode.commands.executeCommand('workbench.action.reloadWindow')
+            : null
+        )
+    }
   })
 }

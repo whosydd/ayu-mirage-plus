@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.4 (2021-10-14)
+
+- 修复：移除主题时，没有选择会弹出‘移除 undefined 的提示’
+
 ## 1.2.3 (2021-09-21)
 
 - 修改 "debugConsole.warningForeground": "#dfbb74"
