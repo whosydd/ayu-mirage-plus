@@ -13,3 +13,5 @@ vsc-extension-quickstart.md
 .prettierignore
 .prettierrc.js
 .editorconfig
+
+test/**
