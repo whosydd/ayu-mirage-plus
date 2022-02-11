@@ -2,6 +2,10 @@
 
 ## 1.4.0
 
-### 重新整理高亮颜色
+### 调整UI高亮颜色
 
-- list.filterMatchBorder -> list.filterMatchBackground
+### 调整主题色的着色范围
+
+### 思考是否将提示信息移到屏幕中央
+
+### 调整细节处的颜色
