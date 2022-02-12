@@ -9,12 +9,12 @@
     "activityBar.inactiveForeground": "#707a8c99",
     "activityBarBadge.background": "#4bda92",
     "activityBarBadge.foreground": "#000000",
-    "badge.background": "#4bda93",
+    "badge.background": "#4bda92",
     "badge.foreground": "#000000",
     "breadcrumb.focusForeground": "#4bda92",
     "button.background": "#4bda92",
     "button.foreground": "#000000",
-    "button.hoverBackground": "#4bda93c5",
+    "button.hoverBackground": "#4bda92c5",
     "button.secondaryBackground": "#707a8c33",
     "button.secondaryForeground": "#cccac2",
     "button.secondaryHoverBackground": "#707a8c80",
@@ -41,7 +41,7 @@
     "editor.inactiveSelectionBackground": "#409fff21",
     "editor.lineHighlightBackground": "#1a1f29",
     "editor.rangeHighlightBackground": "#69538033",
-    "editor.selectionBackground": "#a29bfe40",
+    "editor.selectionBackground": "#6a50a1b0",
     "editor.selectionHighlightBackground": "#87d96c26",
     "editor.selectionHighlightBorder": "#4bda92",
     "editor.snippetTabstopHighlightBackground": "#87d96c33",
@@ -92,8 +92,8 @@
     "errorForeground": "#ff6666",
     "extensionButton.prominentBackground": "#4bda92",
     "extensionButton.prominentForeground": "#000000",
-    "extensionButton.prominentHoverBackground": "#4bda93c5",
-    "focusBorder": "#4bda9354",
+    "extensionButton.prominentHoverBackground": "#4bda92c5",
+    "focusBorder": "#4bda9220",
     "foreground": "#707a8c",
     "gitDecoration.conflictingResourceForeground": "#ff0000",
     "gitDecoration.deletedResourceForeground": "#f27983b3",
@@ -123,8 +123,8 @@
     "list.activeSelectionForeground": "#ffffffcb",
     "list.deemphasizedForeground": "#ff6666",
     "list.errorForeground": "#ff6666",
-    "list.filterMatchBackground": "#5c467266",
-    "list.filterMatchBorder": "#69538066",
+    "list.filterMatchBackground": "#4bda9200",
+    "list.filterMatchBorder": "#4bda92",
     "list.focusBackground": "#63759926",
     "list.focusForeground": "#cccac2",
     "list.focusHighlightForeground": "#4bda92",
@@ -180,14 +180,14 @@
     "sideBarTitle.foreground": "#707a8c",
     "statusBar.background": "#4bda92",
     "statusBar.border": "#1f2430",
-    "statusBar.debuggingBackground": "#f34e67",
-    "statusBar.debuggingForeground": "#e9e8e8",
+    "statusBar.debuggingBackground": "#f0a1a8",
+    "statusBar.debuggingForeground": "#000000",
     "statusBar.foreground": "#000000",
     "statusBar.noFolderBackground": "#4bda92",
     "statusBar.noFolderForeground": "#000000",
     "statusBarItem.activeBackground": "#707a8c33",
     "statusBarItem.hoverBackground": "#707a8c33",
-    "statusBarItem.prominentBackground": "#00ae9d",
+    "statusBarItem.prominentBackground": "#f8d86a",
     "statusBarItem.prominentHoverBackground": "#00000030",
     "statusBarItem.remoteBackground": "#95c7fa",
     "statusBarItem.remoteForeground": "#000000",
@@ -206,7 +206,7 @@
     "terminal.ansiBrightBlack": "#686868",
     "terminal.ansiBrightBlue": "#73d0ff",
     "terminal.ansiBrightCyan": "#95e6cb",
-    "terminal.ansiBrightGreen": "#d5ff80",
+    "terminal.ansiBrightGreen": "#b8e994",
     "terminal.ansiBrightMagenta": "#dfbfff",
     "terminal.ansiBrightRed": "#f28779",
     "terminal.ansiBrightWhite": "#ffffff",
@@ -216,11 +216,11 @@
     "terminal.ansiMagenta": "#dabafa",
     "terminal.ansiRed": "#ed8274",
     "terminal.ansiWhite": "#c7c7c7",
-    "terminal.ansiYellow": "#facc6e",
+    "terminal.ansiYellow": "#eecd8f",
     "terminal.background": "#1f2430",
     "terminal.foreground": "#cccac2",
     "textBlockQuote.background": "#1c212b",
-    "textLink.activeForeground": "#4bda93c5",
+    "textLink.activeForeground": "#4bda92c5",
     "textLink.foreground": "#4bda92",
     "textPreformat.foreground": "#cccac2",
     "titleBar.activeBackground": "#1f2430",
@@ -813,18 +813,26 @@
       }
     },
     {
-      "name": "json",
-      "scope": ["support.type.property-name.json.comments"],
+      "name": "json key",
+      "scope": ["support.type.property-name.json"],
       "settings": {
         "foreground": "#73D0FF",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
-      "name": "json",
-      "scope": ["constant.language.json.comments"],
+      "name": "json value",
+      "scope": ["constant.language.json"],
       "settings": {
-        "foreground": "#4BDA92"
+        "foreground": "#b8e994"
+      }
+    },
+    {
+      "name": "keyword return",
+      "scope": ["storage.modifier.async", "keyword.control.flow", "keyword.control.loop"],
+      "settings": {
+        "foreground": "#f28779",
+        "fontStyle": "italic"
       }
     }
   ],
