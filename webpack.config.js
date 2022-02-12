@@ -40,7 +40,7 @@ const config = {
   },
   plugins: [
     new copePlugin({
-      patterns: [{ from: 'src/themes', to: 'themes' }],
+      patterns: [{ from: 'src/themes/theme.json', to: 'themes/theme.json' }],
     }),
   ],
 }

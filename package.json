@@ -148,10 +148,10 @@
             {
               "name": "",
               "colors": {
-                "themeColor": "#bbffaa",
+                "themeColor": "#b8e994",
                 "foreground": "#000000",
-                "border": "#bbffaa34",
-                "highlight": "#8cf173"
+                "border": "#b8e99434",
+                "highlight": "#b7e994bb"
               }
             }
           ],
@@ -165,7 +165,9 @@
     "vscode:prepublish": "npm run package",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "rm dist && package": "rm -rf dist/ && vsce package"
+    "rm": "rm -rf dist",
+    "mv": "mv ayu-*.vsix extensions/",
+    "vsce package": "npm run mv && npm run rm && vsce package"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",

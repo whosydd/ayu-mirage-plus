@@ -25,6 +25,14 @@
         "reveal": "never"
       },
       "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "vsce package",
+      "presentation": {
+        "close": true,
+        "clear": true
+      }
     }
   ]
 }
