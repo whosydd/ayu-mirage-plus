@@ -34,6 +34,7 @@ export default {
     'editor.selectionHighlightBorder',
     'editorLink.activeForeground',
     'progressBar.background',
+    'list.filterMatchBorder',
   ],
   borderColors: [
     'activityBar.border',
@@ -42,11 +43,11 @@ export default {
     'sideBarSectionHeader.border',
     'panel.border',
     'editorGroup.border',
+    'focusBorder',
   ],
   highlightColors: [
     'button.hoverBackground',
     'extensionButton.prominentHoverBackground',
     'textLink.activeForeground',
-    'focusBorder',
   ],
 }
