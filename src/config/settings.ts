@@ -8,6 +8,9 @@ export default {
     'statusBar.noFolderForeground',
   ],
   themeColors: [
+    'descriptionForeground',
+    'list.focusForeground',
+    'list.activeSelectionForeground',
     'statusBar.background',
     'activityBar.foreground',
     'activityBarBadge.background',

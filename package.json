@@ -99,7 +99,7 @@
               "colors": {
                 "themeColor": "#bbffaa",
                 "foreground": "#000000",
-                "border": "#bbffaa34",
+                "border": "#bbffaa20",
                 "highlight": "#8cf173"
               }
             }
@@ -148,10 +148,10 @@
             {
               "name": "",
               "colors": {
-                "themeColor": "#b8e994",
+                "themeColor": "#bbffaa",
                 "foreground": "#000000",
-                "border": "#b8e99434",
-                "highlight": "#b7e994bb"
+                "border": "#bbffaa20",
+                "highlight": "#8cf173"
               }
             }
           ],
