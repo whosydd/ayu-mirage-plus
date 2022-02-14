@@ -6,3 +6,4 @@ node_modules
 test/
 
 src/themes/theme.bak.json
+src/themes/theme.bak.new.json
