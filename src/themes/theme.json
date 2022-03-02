@@ -161,7 +161,7 @@
     "statusBarItem.hoverBackground": "#424b3e27",
     "statusBarItem.prominentBackground": "#4bda92",
     "statusBarItem.prominentHoverBackground": "#00000030",
-    "statusBarItem.remoteBackground": "#ac92e0",
+    "statusBarItem.remoteBackground": "#a2d2ff",
     "tab.activeBackground": "#1f2430",
     "tab.activeBorder": "#bbffaa",
     "tab.activeForeground": "#bbffaa",
@@ -614,6 +614,34 @@
       "scope": ["storage.type.function.arrow", "keyword.operator.logical"],
       "settings": {
         "foreground": "#E283D2"
+      }
+    },
+    {
+      "scope": "constant.numeric.integer.yaml",
+      "settings": {
+        "foreground": "#73D0FF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "constant.language.boolean.yaml",
+      "settings": {
+        "foreground": "#4BDA92",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "entity.name.tag.yaml",
+      "settings": {
+        "foreground": "#f56b82",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "string.unquoted.plain.out.yaml",
+      "settings": {
+        "foreground": "#ffe08a",
+        "fontStyle": ""
       }
     }
   ]
