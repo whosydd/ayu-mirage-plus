@@ -7,3 +7,5 @@ test/
 
 src/themes/theme.bak.json
 src/themes/theme.bak.new.json
+
+.vscode/settings.json
