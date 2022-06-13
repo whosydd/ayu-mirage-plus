@@ -19,7 +19,6 @@ export default {
     'activityBar.activeBorder',
     'activityBar.foreground',
     'breadcrumb.focusForeground',
-    'descriptionForeground',
     'editorCursor.foreground',
     'editorLineNumber.activeForeground',
     'editorSuggestWidget.highlightForeground',
