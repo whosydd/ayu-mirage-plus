@@ -46,6 +46,7 @@ export default {
     'panel.border',
     'editorGroup.border',
     'focusBorder',
+    'pickerGroup.border',
   ],
   highlightColors: [
     'button.hoverBackground',
