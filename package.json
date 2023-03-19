@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "vscode": "^1.61.0"
+    "vscode": "^1.76.0"
   },
   "categories": [
     "Themes"
@@ -23,11 +23,7 @@
   ],
   "icon": "icon.png",
   "main": "./dist/extension.js",
-  "activationEvents": [
-    "onCommand:addTheme",
-    "onCommand:resetTheme",
-    "onCommand:delTheme"
-  ],
+  "activationEvents": [],
   "contributes": {
     "commands": [
       {
