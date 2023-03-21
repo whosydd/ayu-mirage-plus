@@ -1756,10 +1756,9 @@
     },
     {
       "scope": [
-        "keyword.other.unit.px.css",
         "support.constant.property-value.css",
         "support.constant.color",
-        "keyword.other.unit.percentage.css"
+        "keyword.other.unit"
       ],
       "settings": {
         "foreground": "#F29E74",
