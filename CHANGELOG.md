@@ -1,9 +1,13 @@
 # Changelog
 
-## 1.4.0
+## 1.4.0 (2023-3-21)
 
 - 基于 vscode defalut dark 主题，重新调整语言相关配色
 - 更改 engines 为 vscode ^1.76.0
+
+## 1.3.1 (2022-06-13)
+
+- 移除 "descriptionForeground" 高亮颜色
 
 ## 1.3.0 (2021-10-14)
 
